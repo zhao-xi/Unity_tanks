@@ -67,7 +67,7 @@ public class TankMovement : MonoBehaviour
             if (m_MovementAudio.clip == m_EngineDriving)
             {
                 m_MovementAudio.clip = m_EngineIdling;
-                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch * m_PitchRange);
+                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
                 m_MovementAudio.Play();
             }
         }
@@ -76,7 +76,7 @@ public class TankMovement : MonoBehaviour
             if (m_MovementAudio.clip == m_EngineIdling)
             {
                 m_MovementAudio.clip = m_EngineDriving;
-                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch * m_PitchRange);
+                m_MovementAudio.pitch = Random.Range(m_OriginalPitch - m_PitchRange, m_OriginalPitch + m_PitchRange);
                 m_MovementAudio.Play();
             }
         }
